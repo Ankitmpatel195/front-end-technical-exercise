@@ -1,0 +1,41 @@
+@import '../../styles/vars';
+@import '../../styles/mixin';
+
+.button {
+    background-color: $color-accent;
+    outline: none;
+    border: none;
+    border-radius: 20rem;
+    padding: .8rem 2rem;
+    color: $color-dark;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s transform ease-in-out;
+    text-transform: uppercase;
+
+    
+    @include respond(bigDesk) {
+        font-size: 2rem;
+    }
+    
+    @include respond(midDesk) {
+        font-size: 1.6rem;
+    }
+
+    @include respond(tabPort) {
+        font-size: 1.4rem;
+    }
+
+    @include respond(phone) {
+        font-size: 1.4rem;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    &:active {
+        transform: scale(1);
+    }
+}

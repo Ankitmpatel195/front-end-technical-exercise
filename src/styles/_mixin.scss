@@ -1,0 +1,33 @@
+
+@mixin respond($device) {
+    @if $device == phone {
+        @media (max-width: 37.5em) { // Mobile Devices (iPhone / Android) { 600px => 600/16 = 37.5em }
+            @content
+        ;};
+    }
+    @if $device == tabPort {
+        @media (max-width: 56.25em) { // Tab Portrait Devices (iPad) { 900px => 900/16 = 56.25em }
+            @content
+        ;};
+    }
+    @if $device == tabLand {
+        @media (max-width: 75em) { // Tab Landscape Devices (iPad) { 1200px => 1200/16 = 75em }
+            @content
+        ;};
+    }
+    @if $device == smallDesk {
+        @media (max-width: 100em) { // Small Desktop (FullHD+) { 1200px => 1600/16 = 100em }
+            @content
+        ;};
+    }
+    @if $device == midDesk {
+        @media (max-width: 137.5em) { // Mid Desktop (iMac) { 2=> 2200/16 = 137.5em }
+            @content
+        ;};
+    }
+    @if $device == bigDesk {
+        @media (max-width: 187.5em) { // Big Desktop (iMac Pro) { 2=> 3000/16 = 187.5em }
+            @content
+        ;};
+    }
+}
