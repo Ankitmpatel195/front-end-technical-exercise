@@ -1,0 +1,18 @@
+@import '../../../styles/vars';
+@import '../../../styles/mixin';
+
+.navbar_container {
+    height: 4rem;
+    background-color: $color-dark;
+
+    & .container {
+        height: 100%;
+    }
+
+    & .logo {
+        height: 100%;
+        width: 10rem;
+        background: $color-accent;
+        mask: url('../../../assets/img/logo_endless.svg') no-repeat center;        
+    }
+}
